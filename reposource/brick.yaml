@@ -1,0 +1,36 @@
+name: reposource
+description: A new brick created with the Mason CLI.
+version: 0.1.0+1
+environment:
+  mason: ">=0.1.0-dev.51 <0.1.0"
+vars:
+  name:
+    type: string
+    description: Datasource and Repository name
+    default: Auth
+    prompt: What is the name of the datasource/repository?
+  include_remote_reposource:
+    type: boolean
+    description: Whether to add remote repository and datasource with their implementation
+    default: true
+    prompt: Do you want to include a remote repository and datasource with their implementation (Skip for Yes)?
+  include_local_reposource:
+    type: boolean
+    description: Whether to add local repository and datasource with their implementation
+    default: true
+    prompt: Do you want to include a local repository and datasource with their implementation (Skip for Yes)?
+  uses_remote_datasource_mixin:
+    type: boolean
+    description: Whether the project uses the RemoteDatasourceMixin mixin
+    default: true
+    prompt: Does the remote datasource implementation uses RemoteDatasourceMixin (Skip for Yes)?
+  add_base_models:
+    type: boolean
+    description: Whether to add the base request and response models
+    default: true
+    prompt: Do you want to include base request and remote models (Skip for Yes)?
+  add_barrels:
+    type: boolean
+    description: Whether to add barrel files
+    default: true
+    prompt: Do you want to include barrel files (Skip for Yes)?

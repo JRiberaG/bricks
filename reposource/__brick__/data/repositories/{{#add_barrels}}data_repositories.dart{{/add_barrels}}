@@ -1,0 +1,2 @@
+{{#include_local_reposource}}export 'local/{{name.snakeCase()}}_local_repository_impl.dart';{{/include_local_reposource}}
+{{#include_remote_reposource}}export 'remote/{{name.snakeCase()}}_remote_repository_impl.dart';{{/include_remote_reposource}}

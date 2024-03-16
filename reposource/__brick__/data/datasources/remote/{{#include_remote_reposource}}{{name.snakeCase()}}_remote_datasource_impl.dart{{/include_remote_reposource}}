@@ -1,0 +1,3 @@
+import '{{name.snakeCase()}}_remote_datasource.dart';
+
+class {{name.pascalCase()}}RemoteDatasourceImpl {{#uses_remote_datasource_mixin}}with RemoteDatasourceMixin {{/uses_remote_datasource_mixin}}implements {{name.pascalCase()}}RemoteDatasource {}

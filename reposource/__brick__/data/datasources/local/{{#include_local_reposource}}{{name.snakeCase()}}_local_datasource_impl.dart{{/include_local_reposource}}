@@ -1,0 +1,3 @@
+import '{{name.snakeCase()}}_local_datasource.dart';
+
+class {{name.pascalCase()}}LocalDatasourceImpl implements {{name.pascalCase()}}LocalDatasource {}

@@ -1,0 +1,7 @@
+import '../../datasources/remote/{{#include_remote_reposource}}{{name.snakeCase()}}_remote_datasource.dart{{/include_remote_reposource}}';
+import '../../../domain/repositories/remote/{{name.snakeCase()}}_remote_repository.dart';
+
+class {{name.pascalCase()}}RemoteRepositoryImpl implements {{name.pascalCase()}}RemoteRepository {
+  const {{name.pascalCase()}}RemoteRepositoryImpl(this._datasource);
+  final {{name.pascalCase()}}RemoteDatasource _datasource;
+}

@@ -1,0 +1,2 @@
+export 'requests/base_{{name.snakeCase()}}_request_model.dart';
+export 'responses/base_{{name.snakeCase()}}_response_model.dart';

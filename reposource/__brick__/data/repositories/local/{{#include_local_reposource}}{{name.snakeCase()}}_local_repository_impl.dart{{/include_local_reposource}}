@@ -1,0 +1,3 @@
+import '../../../domain/repositories/local/{{name.snakeCase()}}_local_repository.dart';
+
+class {{name.pascalCase()}}LocalRepositoryImpl implements {{name.pascalCase()}}LocalRepository {}
