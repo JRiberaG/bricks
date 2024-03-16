@@ -1,6 +1,6 @@
 name: reposource
 description: Brick that generates local and remote datasource and repositories.
-version: 0.1.0+5
+version: 0.1.0+1
 environment:
   mason: ">=0.1.0-dev.51 <0.1.0"
 vars:
