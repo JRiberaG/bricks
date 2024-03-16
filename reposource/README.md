@@ -1,33 +1,83 @@
-# reposource
+# Reposource
 
-This brick generates boilerplate code for remote and local data sources, as well as repositories.
+This brick generates boilerplate code for remote and local data sources, as well as repositories. It's meant to be used within a Flutter project following BlueBird architecture.
 
-## Getting Started 🚀
 
-1. Install the brick
+## Setup 🧑‍💻
+Ensure you have the mason_cli installed.
+
+```sh
+# 🎯 Activate from https://pub.dev
+dart pub global activate mason_cli
+```
+
+```sh
+# 🍺 Or install from https://brew.sh
+brew tap felangel/mason
+brew install mason
+```
+
+
+## Installation ☁️
+
+```sh
+# Install locally
+mason add reposource \
+  --git-url https://www.github.com/jriberag/bricks \
+  --git-path reposource \
+  --git-ref 77397c40dbd92c80f28059c6d4fd0e549f4a8b11
+```
+
+```sh
+# Install globally
+mason add -g reposource \
+  --git-url https://www.github.com/jriberag/bricks \
+  --git-path reposource \
+  --git-ref 77397c40dbd92c80f28059c6d4fd0e549f4a8b11
+```
+
+
+## Usage 🚀
+
+```sh
+mason make reposource -o features/<your_feature>/lib/src/
+```
+
+## Output 📦
 
 ```
-mason add -g reposource 
-    --git-url https://www.github.com/jriberag/
-    --git-path bricks/reposource
+
+--name Auth
+
+.
+├── data/
+│   ├── datasources/
+│   │   ├── local/
+│   │   │   ├── auth_local_datasource.dart
+│   │   │   └── auth_local_datasource_impl.dart
+│   │   ├── remote/
+│   │   │   ├── auth_remote_datasource.dart
+│   │   │   └── auth_remote_datasource_impl.dart
+│   │   └── datasources.dart
+│   ├── models/
+│   │   ├── requests/
+│   │   │   └── base_auth_request_model.dart
+│   │   ├── responses/
+│   │   │   └── base_auth_response_model.dart
+│   │   └── models.dart
+│   └── repositories/
+│       ├── local/
+│       │   └── auth_local_repository_impl.dart;
+│       ├── remote/
+│       │   └── auth_remote_repository_impl.dart;
+│       └── data_repositories.dart
+└── domain/
+    ├── entities/
+    │   └── entities.dart
+    └── repositories/
+        ├── local/
+        │   └── auth_local_repository.dart;
+        ├── remote/
+        │   └── auth_remote_repository.dart;
+        └── domain_repositories.dart
 ```
-
-2. 
-
-This is a starting point for a new brick.
-A few resources to get you started if this is your first brick template:
-
-- [Official Mason Documentation][2]
-- [Code generation with Mason Blog][3]
-- [Very Good Livestream: Felix Angelov Demos Mason][4]
-- [Flutter Package of the Week: Mason][5]
-- [Observable Flutter: Building a Mason brick][6]
-- [Meet Mason: Flutter Vikings 2022][7]
-
-[1]: https://github.com/felangel/mason
-[2]: https://docs.brickhub.dev
-[3]: https://verygood.ventures/blog/code-generation-with-mason
-[4]: https://youtu.be/G4PTjA6tpTU
-[5]: https://youtu.be/qjA0JFiPMnQ
-[6]: https://youtu.be/o8B1EfcUisw
-[7]: https://youtu.be/LXhgiF5HiQg

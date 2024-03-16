@@ -1,6 +1,6 @@
 name: reposource
-description: A new brick created with the Mason CLI.
-version: 0.1.0+1
+description: Brick that generates local and remote datasource and repositories.
+version: 0.1.0+5
 environment:
   mason: ">=0.1.0-dev.51 <0.1.0"
 vars:
@@ -11,14 +11,14 @@ vars:
     prompt: What is the name of the datasource/repository?
   include_remote_reposource:
     type: boolean
-    description: Whether to add remote repository and datasource with their implementation
+    description: Whether to add remote repository and datasource with their implementations
     default: true
-    prompt: Do you want to include a remote repository and datasource with their implementation (Skip for Yes)?
+    prompt: Do you want to include a remote repository and datasource with their implementations (Skip for Yes)?
   include_local_reposource:
     type: boolean
-    description: Whether to add local repository and datasource with their implementation
+    description: Whether to add local repository and datasource with their implementations
     default: true
-    prompt: Do you want to include a local repository and datasource with their implementation (Skip for Yes)?
+    prompt: Do you want to include a local repository and datasource with their implementations (Skip for Yes)?
   uses_remote_datasource_mixin:
     type: boolean
     description: Whether the project uses the RemoteDatasourceMixin mixin
